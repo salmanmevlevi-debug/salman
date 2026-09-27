@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* Bagian utama */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 8%;
+    gap: 50px;
+}
+
+
+/* Tulisan di sebelah kiri */
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hero-content h1 span {
+    color: #38bdf8;
+}
+
+.hero-content p {
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+/* Foto di sebelah kanan */
+.hero-image {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 20px;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 260px;
+        height: 340px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111c32;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Semua section */
+.section {
+    padding: 80px 8%;
+    margin: 0;
+}
+
+/* Judul setiap section */
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f1f5f9;
+}
+
+/* Paragraf */
+.section p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Background bagian proyek */
+#projects {
+    background: #111c32;
+}
+
+/* Susunan kartu proyek */
+
+/* SECTION PROYEK */
+#projects {
+    width: 100%;
+    padding: 80px 8%;
+    background: #0f172a;
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+}
+
+/* GRID KARTU */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin: 0;
+}
+
+/* KARTU */
+.project-card {
+    min-width: 0;
+    width: 100%;
+    padding: 20px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+/* GAMBAR */
+.project-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* JUDUL DAN DESKRIPSI */
+.project-info h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #38bdf8;
+}
+
+.project-info p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #38bdf8;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* RESPONSIF */
+@media (max-width: 900px) {
+    .project-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Bagian Keahlian */
+#skills {
+    width: 100%;
+    padding: 80px 8%;
+    text-align: left;
+    background: #0f172a;
+    box-sizing: border-box;
+}
+
+#skills h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f1f5f9;
+}
+
+#skills p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+    background: #0f172a;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* LOGO */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f1f5f9;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+/* MENU */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #38bdf8;
+}
+
+/* RESPONSIF UNTUK HP */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Animasi bagian Home */
+#home {
+    animation: fadeIn 1s ease;
+}
+
+/* Animasi muncul perlahan */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi foto profil */
+.hero-image img {
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Kondisi awal kartu sebelum terlihat */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Kondisi saat kartu muncul */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
